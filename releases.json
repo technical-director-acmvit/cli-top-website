@@ -1,6 +1,13 @@
 {
   "releases": [
     {
+      "version": "2.9.11",
+      "releaseDate": "2025-11-17",
+      "changes": [
+        "Added shimmer on run (and this!)"
+      ]
+    },
+    {
       "version": "2.9.10",
       "releaseDate": "2025-11-17",
       "changes": [
