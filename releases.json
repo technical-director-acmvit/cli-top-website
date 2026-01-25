@@ -1,6 +1,13 @@
 {
   "releases": [
     {
+      "version": "2.9.13",
+      "releaseDate": "2026-01-25",
+      "changes": [
+        "Fixed calendar out of range"
+      ]
+    },
+    {
       "version": "2.9.12",
       "releaseDate": "2026-01-8",
       "changes": [
