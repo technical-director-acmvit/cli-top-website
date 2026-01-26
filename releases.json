@@ -1,6 +1,13 @@
 {
   "releases": [
     {
+      "version": "2.9.15",
+      "releaseDate": "2026-01-25",
+      "changes": [
+        "Optimized for performance"
+      ]
+    },
+    {
       "version": "2.9.14",
       "releaseDate": "2026-01-25",
       "changes": [
