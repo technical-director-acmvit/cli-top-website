@@ -16,17 +16,17 @@ fetch("../latest.json")
     const androidAnchorTag = document.getElementById("android-download-link");
     const windowsInstallerAnchorTag = document.getElementById("windows-installer-download-link");
 
-    const baseUrl = "https://github.com/technical-director-acmvit/cli-top-website/raw/main/buildFiles";
+    const baseUrl = new URL("../buildFiles", import.meta.url).href;
 
     windowsAnchorTag.href = `${baseUrl}/v${data.version}/cli-top-windows_v${data.version}.zip`;
     linuxAnchorTag.href = `${baseUrl}/v${data.version}/cli-top-linux_v${data.version}.zip`;
-    macAnchorTag.href = `${baseUrl}/v${data.version}/cli-top-macos_v${data.version}.zip`;
+    macAnchorTag.href = `${baseUrl}/v${data.version}/cli-top-macos_v${data.version}.pkg`;
     androidAnchorTag.href = `${baseUrl}/v${data.version}/cli-top-android_v${data.version}.zip`;
     windowsInstallerAnchorTag.href = `${baseUrl}/v${data.version}/cli-top-windows-installer_v${data.version}.exe`;
 
     windowsAnchorTag.innerText = `v${data.version}`;
     linuxAnchorTag.innerText = `v${data.version}`;
-    macAnchorTag.innerText = `v${data.version}`;
+    macAnchorTag.innerText = `Installer (v${data.version})`;
     androidAnchorTag.innerText = `v${data.version}`;
     windowsInstallerAnchorTag.innerText = `v${data.version}`;
   })
