@@ -38,7 +38,7 @@ async function loadChangelogData() {
             majorVersionGroup.appendChild(majorVersionHeader);
             
             const releases = majorVersions[majorVersion].sort((a, b) => {
-                return parseFloat(b.version) - parseFloat(a.version);
+                return compareVersions(b.version, a.version);
             });
             
             releases.forEach(release => {
@@ -114,3 +114,21 @@ async function loadChangelogData() {
 }
 
 export { loadChangelogData };
+
+function compareVersions(a, b) {
+    const parse = (v) => String(v).split('.').map((part) => {
+        const n = Number(part);
+        return Number.isNaN(n) ? 0 : n;
+    });
+    const av = parse(a);
+    const bv = parse(b);
+    const len = Math.max(av.length, bv.length);
+    for (let i = 0; i < len; i++) {
+        const ai = av[i] || 0;
+        const bi = bv[i] || 0;
+        if (ai !== bi) {
+            return ai - bi;
+        }
+    }
+    return 0;
+}
