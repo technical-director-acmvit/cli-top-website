@@ -1,6 +1,13 @@
 {
   "releases": [
     {
+      "version": "2.12.1",
+      "releaseDate": "2026-10-15",
+      "changes": [
+        "Bug fixes"
+      ]
+    },
+    {
       "version": "2.12.0",
       "releaseDate": "2026-04-23",
       "changes": [
